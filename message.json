@@ -1,0 +1,26 @@
+{
+  "ubicacion": [{
+    "street_address": "Carrer de la Creu Coberta, 93, 08014",
+    "city": "Barcelona"    
+  },
+  {
+    "street_address": "Travessera de les Corts, 215, 08028",
+    "city": "Barcelona"    
+  },
+  {
+    "street_address": "Carrer de la Feixa Llarga, s/n, 08907",
+    "city": "L'Hospitalet de llobregat"    
+  },
+  {
+    "street_address": "Carrer de la Mare de Déu de Port, 56, 58, 08038",
+    "city": "Barcelona"    
+  },
+  {
+    "street_address": "Av. de la Fama, 79, 08940 Cornellà de Llobregat",
+    "city": "Barcelona"    
+  },
+  {
+    "street_address": "C/ d'Aragó, 284, 08009",
+    "city": "Barcelona"    
+  }]
+}

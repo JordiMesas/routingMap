@@ -1,0 +1,103 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Center the map</title>
+		<meta
+			name="viewport"
+			content="initial-scale=1,maximum-scale=1,user-scalable=no"
+		/>
+
+		<!-- Load Leaflet from CDN -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+			integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+			crossorigin=""
+		/>
+		<script
+			src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+			integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+			crossorigin=""
+		></script>
+
+		<!-- Load Esri Leaflet from CDN -->
+		<script
+			src="https://unpkg.com/esri-leaflet@2.3.2/dist/esri-leaflet.js"
+			integrity="sha512-6LVib9wGnqVKIClCduEwsCub7iauLXpwrd5njR2J507m3A2a4HXJDLMiSZzjcksag3UluIfuW1KzuWVI5n/cuQ=="
+			crossorigin=""
+		></script>
+
+		<!-- Geocode -->
+
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.css"
+		/>
+		<script src="https://cdn.jsdelivr.net/leaflet.esri.geocoder/2.1.0/esri-leaflet-geocoder.js"></script>
+
+		<!-- Routing -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.css"
+		/>
+
+		<script src="https://unpkg.com/leaflet-routing-machine@latest/dist/leaflet-routing-machine.js"></script>
+
+		<style>
+			body {
+				margin: 0;
+				padding: 0;
+			}
+
+			#map {
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				right: 0;
+				left: 0;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="map"></div>
+		
+		<script src="./ajax.js"></script>
+
+		<script>
+			var geocoder = L.esri.Geocoding.geocodeService();
+
+			var map = L.map('map');
+			// var ptFinal;
+
+			L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+				attribution:
+					'&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors',
+			}).addTo(map);
+
+			descargaArchivo();
+		
+
+			// geocoder.geocode().address('sant brú 50').city('badalona').region('barcelona').postal(08911).run(function (error, response) {
+			// geocoder
+			// 	.geocode()
+			// 	.text('diagonal 455 barcelona')
+			// 	.run(function (error, response) {
+			// 		if (error) {
+			// 			return;
+			// 		}
+			// 		console.log(response);
+			// 		map.fitBounds(response.results[0].bounds);
+			// 		map.setZoom(18);
+
+			// 		ptFinal = response.results[0].latlng;
+			// 		L.marker(response.results[0].latlng)
+			// 			.addTo(map)
+			// 			.bindPopup('<b>diagonal 455 barcelona.')
+			// 			.openPopup();
+			// 	});
+		</script>
+
+		<script></script>
+	</body>
+</html>
